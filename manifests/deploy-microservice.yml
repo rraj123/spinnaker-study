@@ -11,7 +11,7 @@ spec:
     replicas: 3
     selector:
         matchLabels:
-            run: mild-temper-microservice
+            run: raj-solo-microservice
     template:
         metadata:
             labels:
@@ -31,13 +31,13 @@ kind: Service
 apiVersion: v1
 metadata:
     labels:
-        app: mild-temper-microservice-service
-    name: mild-temper-microservice-service
+        app: raj-solo-microservice-service
+    name: raj-solo-microservice-service
     namespace: microservices
 spec:
     selector:
         source: demo
-        app: mild-temper-microservice
+        app: raj-solo-microservice
     ports:
         -   name: web
             protocol: TCP
@@ -59,7 +59,7 @@ spec:
                 paths:
                     -   path: /mild-temper(/|$)(.*)
                         backend:
-                            serviceName: mild-temper-microservice-service
+                            serviceName: raj-solo-microservice-service
                             servicePort: 30201
 
 
