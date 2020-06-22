@@ -57,7 +57,7 @@ spec:
     rules:
         -   http:
                 paths:
-                    -   path: /mild-temper(/|$)(.*)
+                    -   path: /raj-solo-(/|$)(.*)
                         backend:
                             serviceName: raj-solo-microservice-service
                             servicePort: 30201
